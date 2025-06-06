@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <section class="contact-section">
+            <h2 class="section-title">We’d Love to Hear From You</h2>
+            <p class="contact-intro">
+                Whether it’s feedback, collaboration ideas, or just a kind word — your message matters. Drop us a line and we’ll
+                get back to you soon!</p>
+    
+    </header>
+   
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="Love-notes.html">Love notes</a>
+        <a href="self-help.html">Self-Help</a>
+        <a href="ebooks.html">EBooks</a>
+        <a href="ghost-writing.html">Ghost Writing</a>
+        <a href="tip-jar.html">Tip-Jar</a>
+        <a href="contact.html">Contact</a>
+        </nav>
+   
+    
+        <form id="contactForm" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            <p id="formResponse" class="form-response"></p>
+        </form>
+    </section>
+      
+
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@molebogengs_notes?_t=ZM-8wcePL0c1iS&_r=1"><img src="images/tiktok.jpg" alt="Tiktok"></a>
+            <p>&copy; 2025 Molebogeng's Notes. All rights reserved.</p>
+        </div>
+    </footer >
+
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const responseMessage = document.getElementById("formResponse");
+
+        contactForm.addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent real submission for demo
+
+            // Simulate successful response
+            responseMessage.textContent = "Thank you for reaching out! We'll be in touch soon.";
+            responseMessage.style.color = "green";
+
+            // Optional: Clear the form
+            contactForm.reset();
+        });
+    </script>
+      
+
+
+</body>
+
+</html>
