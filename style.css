@@ -76,7 +76,17 @@ body::before {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* space between logo and links */
+}
 
+.main-nav .logo {
+    height: auto;
+    /* or adjust size as needed */
+    width: 120px;
 
 /* Navigation */
 /* Nav */
