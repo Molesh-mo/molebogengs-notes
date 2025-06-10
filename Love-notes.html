@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Molebogeng's heartfelt reflections, stories and lessons to heal, motivate, and inspire." />
+    <title>Love notes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+    <!-- Quote -->
+    <section class="quote">
+        <h2 class="section-title">Healing is not a destination,<br>it’s a daily practice.</h2>
+        <p class="ebooks-intro">
+        A heartfelt collection of words designed to:<br>
+        Heal.Motivate. Inspire.</p>
+    
+    </section>
+  
+    </header>
+  
+<!-- Navigation -->
+<nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="Love-notes.html">Love notes</a>
+    <a href="self-help.html">Self-Help</a>
+    <a href="ebooks.html">EBooks</a>
+    <a href="ghost-writing.html">Ghost Writing</a>
+    <a href="tip-jar.html">Tip-Jar</a>
+    <a href="contact.html">Contact</a>
+</nav>
+    <!-- Food for Thought Section -->
+   
+    <section class="notes-grid">
+        <article class="note-card" onclick="expandNote(this)">
+            <h4>The right one will feel like home.</h4>
+            <p class="date">May 12, 2025</p>
+            <a href="poems/molebogeng notes.png" data-lightbox="notes" data-title="The right one will feel like home.">
+                <img src="poems/molebogeng notes.png" alt="Molebogeng Note" />
+            </a>
+        </article>
+
+        <article class="note-card" onclick="expandNote(this)">
+            <h4>Note to Self, when there is no way out.</h4>
+            <p class="date">May 19, 2025</p>
+            <a href="poems/molebogeng's notes w2.png" data-lightbox="notes"
+                data-title="Note to Self, when there is no way out.">
+                <img src="poems/molebogeng's notes w2.png" alt="Molebogeng Note" />
+            </a>
+        </article>
+    </section>
+
+    <!-- Featured Piece -->
+    <article>
+        <h2>Featured Piece</h2>
+        <p>Want your piece featured on Molebogeng Notes? Whether it’s a poem, a love letter, or a tribute — we’ve made
+            space for *your* words.</p>
+        <p><strong>Email us:</strong> <a href="mailto:mmosolute@gmail.com">mmosolute@gmail.com</a> to feature your
+            voice or promote your creative work.</p>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        
+            <div class="social-icons">
+                <a href="https://www.tiktok.com/@molebogengs_notes?_t=ZM-8wcePL0c1iS&_r=1"><img src="images/tiktok.jpg"
+                        alt="Tiktok"></a>
+            <p>&copy; 2025 Molebogeng's Notes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Affirmation Grid Script -->
+    <script>
+        const affirmations = [
+            "I am capable of great things.",
+            "God’s timing is perfect.",
+            "I walk in purpose and power.",
+            "Every setback is a setup for a comeback.",
+            "I attract peace, love, and clarity.",
+            "What’s meant for me is already mine.",
+            "I am growing stronger every day.",
+            "I embrace challenges with courage.",
+            "My potential is limitless.",
+            "I am worthy of success and happiness.",
+            "Each breath brings me peace and clarity.",
+            "Today, I show up with confidence and joy.",
+            "I radiate positivity and abundance.",
+            "God is aligning everything for my good.",
+            "My vision is clear, and my path is divine."
+        ];
+
+        const grid = document.getElementById('affirmationGrid');
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function renderAffirmations() {
+            const shuffled = shuffleArray([...affirmations]);
+            const toDisplay = shuffled.slice(0, 6);
+            grid.innerHTML = '';
+            toDisplay.forEach((text, index) => {
+                const quote = document.createElement('blockquote');
+                quote.textContent = `“${text}”`;
+                quote.style.animationDelay = `${index * 0.1}s`;
+                grid.appendChild(quote);
+            });
+        }
+
+        renderAffirmations();
+        setInterval(renderAffirmations, 86400000); // Refresh daily
+    </script>
+
+</body>
+
+</html>
