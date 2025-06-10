@@ -87,6 +87,7 @@ body::before {
     gap: 1rem;
     justify-content: center;
     margin: 2rem 0;
+     background-color:#fce8e0;
 }
 
 .main-nav a {
