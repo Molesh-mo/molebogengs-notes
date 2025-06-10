@@ -20,7 +20,7 @@ body {
 
 body::before {
     content: "";
-    background: url('images/') no-repeat center center;
+    background: url('molebogengs-notes/images/white_notes_logo_transparent.png') no-repeat center center;
     background-size: 200px;
     opacity: 0.03;
     position: fixed;
