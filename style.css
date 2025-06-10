@@ -1,5 +1,12 @@
 /* Reset and base styles */
 
+html {
+    scroll-behavior: smooth;
+}
+
+.btn {
+    cursor: pointer;
+}
 
 body {
     font-family: 'Georgia', serif;
@@ -7,7 +14,26 @@ body {
     color: #4B2E2E;
     line-height: 1.6;
     padding: 1rem;
+    position: relative;
+    z-index: 1;
 }
+
+body::before {
+    content: "";
+    background: url('images/') no-repeat center center;
+    background-size: 200px;
+    opacity: 0.03;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
 
 /* Utility classes */
 .btn {
@@ -36,7 +62,7 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
-   
+
 }
 
 /* -------------------- HEADER -------------------- */
@@ -89,23 +115,17 @@ body {
     justify-content: center;
     text-align: center;
 }
+
 .about img {
     max-width: 100px;
     border-radius: 50%;
-     margin-bottom: 1rem;
-}
-
-.about-logo {
-    max-width: 100px;
-    /* smaller than avatar */
-    display: block;
     margin-bottom: 1rem;
-      border-radius: 50%;
 }
 
 .about h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    color: #4B2E2E;
 }
 
 .about p {
@@ -114,26 +134,47 @@ body {
     color: #4B2E2E;
 }
 
+
 /* Footer */
 
+/* Footer */
 footer {
+    background: #fce8e0;
+    color: white;
     text-align: center;
-    padding: 2rem 1rem;
-    background-color: #F9E8DE;
-    margin-top: 3rem;
-    color: #4B2E2E;
+    border-top: 1px solid#eed1c6;
+    text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 3rem;
+        color: #4B2E2E;
 }
 
-.social-icons a {
-    margin: 0 0.5rem;
-    display: inline-block;
+footer .social-icons a img {
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+    filter: none;
+     width: 24px;
+ filter: brightness(0) saturate(100%) sepia(20%) hue-rotate(10deg);
+   }
+footer .social-icons img:hover {
+    transform: scale(1.1);
 }
 
-.social-icons img {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) saturate(100%) sepia(20%) hue-rotate(10deg);
-}
+    .social-icons img {
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) saturate(100%) sepia(20%) hue-rotate(10deg);
+        }
+
+    footer .social-icons a img {
+        height: 30px;
+        margin: 0 10px;
+        transition: transform 0.3s ease;
+        filter: none;
+     }
+
+
 
 /* Responsive */
 
@@ -163,20 +204,13 @@ footer {
         text-align: center;
     }
 
-  
-
-
-.about h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #4B2E2E;
+    .about img {
+        margin-bottom: 1rem;
+    }
 }
 
-.about p {
-    max-width: 500px;
-    font-size: 1rem;
-    color: #4B2E2E;
-}
+
+
 
 /* love note page  */
 .quote {
@@ -231,18 +265,7 @@ footer {
     text-align: center;
 }
 
-/* Footer */
-footer {
-    background: #fce8e0;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
 
-footer .social-icons a img {
-    height: 24px;
-    margin: 0 10px;
-}
 
 /* Quote wall */
 
@@ -304,27 +327,6 @@ footer .social-icons a img {
     color: #6B4A3A;
 }
 
-
-/* footer */
-footer {
-    background: #FCE8E0;
-    color: #4B2E2E;
-    padding: 2rem 1rem;
-    text-align: center;
-    border-top: 1px solid #EED1C6;
-    font-size: 0.9rem;
-}
-
-footer .social-icons img {
-    filter: none;
-    height: 30px;
-    margin: 0 10px;
-    transition: transform 0.3s ease;
-}
-
-footer .social-icons img:hover {
-    transform: scale(1.1);
-}
 
 /* affirmation */
 
@@ -419,7 +421,10 @@ button.refresh-btn:hover {
 
 .featured-section {
     padding: 40px 20px;
-    background:#F9E8DE;
+    background: #FDEFE8;
+    /* or a gradient */
+    text-align: center;
+
 }
 
 .ebooks-section {
