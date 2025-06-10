@@ -83,15 +83,24 @@ body {
 .about {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 2rem 1rem;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
 }
-
 .about img {
     max-width: 100px;
     border-radius: 50%;
+     margin-bottom: 1rem;
+}
+
+.about-logo {
+    max-width: 100px;
+    /* smaller than avatar */
+    display: block;
+    margin-bottom: 1rem;
+      border-radius: 50%;
 }
 
 .about h3 {
@@ -154,32 +163,8 @@ footer {
         text-align: center;
     }
 
-    .about img {
-        margin-bottom: 1rem;
-    }
+  
 
-
-.about {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 2rem 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-}
-
-.about-logo {
-    max-width: 100px;
-    border-radius: 50%;
-}
-
-.about-logo {
-    max-width: 80px;
-    /* smaller than avatar */
-    display: block;
-    margin-bottom: 1rem;
-}
 
 .about h3 {
     font-size: 1.5rem;
