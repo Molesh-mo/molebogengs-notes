@@ -157,7 +157,7 @@ footer {
     .about img {
         margin-bottom: 1rem;
     }
-}
+
 
 .about {
     display: flex;
@@ -166,9 +166,10 @@ footer {
     padding: 2rem 1rem;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
 }
 
-.about-avatar {
+.about-logo {
     max-width: 100px;
     border-radius: 50%;
 }
@@ -433,7 +434,7 @@ button.refresh-btn:hover {
 
 .featured-section {
     padding: 40px 20px;
-    background:
+    background:#F9E8DE;
 }
 
 .ebooks-section {
