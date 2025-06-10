@@ -20,7 +20,7 @@ body {
 
 body::before {
     content: "";
-    background: url('molebogengs-notes/images/white_notes_logo_transparent.png') no-repeat center center;
+    background: url('images/white_notes_logo_transparent.png') no-repeat center center;
     background-size: 200px;
     opacity: 0.03;
     position: fixed;
@@ -70,12 +70,14 @@ body::before {
 .header-text {
     text-align: left;
     flex: 1;
+
 }
 
 .site-header h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
+
 .main-nav {
     display: flex;
     align-items: center;
@@ -87,9 +89,10 @@ body::before {
     height: auto;
     /* or adjust size as needed */
     width: 120px;
+}
 
 /* Navigation */
-/* Nav */
+
 
 .main-nav {
     display: flex;
@@ -97,11 +100,11 @@ body::before {
     gap: 1rem;
     justify-content: center;
     margin: 2rem 0;
-     background-color:#fce8e0;
+    background-color:#fce8e0;
 }
 
 .main-nav a {
-    color: #8C5C47;
+    color: #AD856B;
     text-decoration: none;
     font-weight: 600;
     padding: 0.4rem 0.8rem;
@@ -168,7 +171,8 @@ footer .social-icons a img {
      width: 24px;
  filter: brightness(0) saturate(100%) sepia(20%) hue-rotate(10deg);
    }
-footer .social-icons img:hover {
+
+   social-icons img:hover {
     transform: scale(1.1);
 }
 
